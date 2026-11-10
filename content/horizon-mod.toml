@@ -1,0 +1,11 @@
+# Port-owned content mod for the carried Measurements tape measure (item
+# definition, model, texture, lang, recipe, creative tab). Built from the MIT
+# upstream repository's own assets (Mrbysco/Measurements 3.0.3); the behaviour
+# lives in the native bundle in ../. LOCAL-ONLY until the maintainer approves
+# publishing (ARCHITECTURE.md §8).
+id = "measurements"
+name = "Measurements"
+version = "3.0.3"
+api = "0.2"
+side = "both"
+capabilities = ["registries"]

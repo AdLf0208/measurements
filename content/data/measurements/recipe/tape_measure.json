@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "G": "minecraft:gray_wool",
+    "I": "#c:ingots/iron",
+    "Y": "minecraft:yellow_wool"
+  },
+  "pattern": [
+    " G ",
+    "GIY",
+    " GY"
+  ],
+  "result": {
+    "count": 1,
+    "id": "measurements:tape_measure"
+  }
+}

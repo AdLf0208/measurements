@@ -1,0 +1,49 @@
+id = "measurements"
+kind = "native-mod"
+name = "measurements"
+summary = "A Horizon port of measurements."
+description = """
+A port of [measurements](Mrbysco/Measurements) for Horizon.
+
+**Implemented so far**
+
+- Item** `measurements:tape_measure`: right-click a block to place point A,
+- right-click again to place point B and finish the measurement. The action bar
+- shows `Distance: <d> blocks (X: <dx>, Y: <dy>, Z: <dz>)`.
+- Distance** is Euclidean over the coordinate differences; the distance is
+- printed with one decimal (`5.0`, `7.1`, `0.0`) and the deltas as integers.
+- Next click** after a finished measurement starts a new point A.
+- Shift-right-click** removes the **latest** measurement (upstream's
+- `undo`), reporting `Measurement undone (N left)` or `Measurement cleared`
+
+**Not yet ported**
+
+- Delivery is the action bar, not an in-world box.** Upstream is a
+- client-only renderer: `MeasurementBox` draws an AABB and three axis labels
+- (`MeasurementBox.java:118-173`). It has no chat/action-bar readout and no
+- Euclidean distance. The pin has no client render hook usable in the headless
+- harness, so the port reports through `native_action_bar`, as the campaign
+- brief chose. Deferred: the drawn box, its colours (line/text, `XYZRGB`),
+- text size, line width, and the live crosshair preview.
+- Added distance and integer deltas.** The port prints the Euclidean
+
+Original copyright and licence notices are kept in this repository. Pinned to
+Horizon 1d63e0a and horizon-mixins 5a64af93. Help with the remaining slices is
+welcome.
+"""
+authors = ["AdLf0208"]
+owners = ["AdLf0208"]
+owner_ids = [107615167]
+license = "MIT"
+source = "https://github.com/AdLf0208/measurements"
+icon = "icons/measurements.png"
+categories = ["utility"]
+tags = ["port", "horizon"]
+
+[[versions]]
+version = "0.1.0"
+published = "2026-11-10"
+game = "26.3"
+file = "measurements.hnmod"
+sha256 = "76814bdc08b21006123cbaae014e16333082e0449e429303c736afec3630af36"
+changelog = "First release"

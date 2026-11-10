@@ -1,0 +1,18 @@
+[package]
+# Ported from: Measurements 3.0.3 (Mrbysco/Measurements, MIT), Minecraft Java
+# 1.21.1 NeoForge. LOCAL-ONLY until the maintainer approves publishing
+# (ARCHITECTURE.md §8).
+name = "horizon-measurements"
+version = "0.1.0"
+edition = "2024"
+rust-version = "1.95"
+license = "MIT"
+description = "Measurements for Horizon: a tape measure that reports distances and deltas"
+
+[lib]
+# This exact source is also injected as a same-crate module by horizon-mixins.
+path = "mixins/measurements/runtime.rs"
+
+[workspace]
+members = ["tools/audit"]
+resolver = "2"
